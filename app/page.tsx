@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import SolutionsSection from "./components/SolutionsSection";
 import SkillsSection from "./components/SkillsSection";
+import ProjectsSection from "./components/ProjectsSection";
 import GradientBackground from "./components/GradientBackground";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroSection />
         <SolutionsSection />
         <SkillsSection />
+        <ProjectsSection />
       </div>
     </div>
   );
