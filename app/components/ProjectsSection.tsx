@@ -84,26 +84,8 @@ export default function ProjectsSection() {
     };
   }, []);
 
-  // Animate cards when category changes
-  useEffect(() => {
-    const cards = Array.from(projectsCardsRef.current?.children || []) as HTMLElement[];
-    
-    // Fade out and reset
-    cards.forEach((card) => {
-      gsap.set(card, { opacity: 0, y: 30 });
-    });
 
-    // Fade in with stagger
-    gsap.to(cards, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      ease: "power3.out",
-      stagger: 0.1,
-    });
-  }, [activeCategory]);
-
-  const categories = ["Frontend", "Backend", "ML/AI"];
+  const categories = ["Frontend", "Backend"];
 
   const projectsByCategory: Record<string, Array<{
     bgColor: string;

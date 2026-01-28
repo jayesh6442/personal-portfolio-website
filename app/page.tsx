@@ -5,6 +5,8 @@ import HeroSection from "./components/HeroSection";
 import SolutionsSection from "./components/SolutionsSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ServicesSection from "./components/ServicesSection";
+import QualityServicesSection from "./components/QualityServicesSection";
 import GradientBackground from "./components/GradientBackground";
 
 export default function Home() {
@@ -17,6 +19,8 @@ export default function Home() {
         <SolutionsSection />
         <SkillsSection />
         <ProjectsSection />
+        <ServicesSection />
+        <QualityServicesSection />
       </div>
     </div>
   );
