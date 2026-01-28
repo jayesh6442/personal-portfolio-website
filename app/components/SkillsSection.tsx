@@ -8,7 +8,7 @@ const skillLogos: Record<string, string> = {
   // Languages
   Python: "https://cdn.simpleicons.org/python",
   JavaScript: "https://cdn.simpleicons.org/javascript",
-  Java: "https://cdn.simpleicons.org/java",
+  Java: "https://cdn.simpleicons.org/openjdk",
   TypeScript: "https://cdn.simpleicons.org/typescript",
   Go: "https://cdn.simpleicons.org/go",
   // Frameworks
@@ -26,9 +26,9 @@ const skillLogos: Record<string, string> = {
   // Deployments
   Docker: "https://cdn.simpleicons.org/docker",
   Kubernetes: "https://cdn.simpleicons.org/kubernetes",
-  AWS: "https://cdn.simpleicons.org/amazonaws",
+  AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
   "Github Actions": "https://cdn.simpleicons.org/githubactions", Jenkins: "https://cdn.simpleicons.org/jenkins",
-  "Argo CD": "https://cdn.simpleicons.org/argo",
+  "Argo CD": "https://cdn.simpleicons.org/argo/000000",
 };
 
 export default function SkillsSection() {
