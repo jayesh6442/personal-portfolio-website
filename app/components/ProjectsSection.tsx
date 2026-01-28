@@ -8,6 +8,7 @@ export default function ProjectsSection() {
   const projectsSectionRef = useRef<HTMLElement>(null);
   const projectsTitleRef = useRef<HTMLHeadingElement>(null);
   const projectsBarRef = useRef<HTMLDivElement>(null);
+  const sliderTrackRef = useRef<HTMLDivElement>(null);
   const projectsCardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -109,7 +110,7 @@ export default function ProjectsSection() {
     title: string;
     description: string;
     technologies: string[];
-    icon: JSX.Element;
+    icon: React.ReactElement;
   }>> = {
     Frontend: [
       {
@@ -286,26 +287,52 @@ export default function ProjectsSection() {
             Some Of Projects
           </h2>
           
-          {/* Category Slider/Tabs */}
+          {/* Category Slider - Window/Slider Bar */}
           <div
             ref={projectsBarRef}
-            className="flex justify-center gap-4 mb-8"
+            className="mb-12 md:mb-16 flex justify-center"
             style={{ transformOrigin: "center" }}
           >
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-6 py-2 rounded-lg font-medium font-sans transition-all duration-300 ${
-                  activeCategory === category
-                    ? "bg-[#ff6b35] text-white shadow-lg shadow-orange-500/20"
-                    : "bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white"
-                }`}
-                aria-pressed={activeCategory === category}
-              >
-                {category}
-              </button>
-            ))}
+            <div className="w-full max-w-2xl px-4">
+              {/* Slider Track Container */}
+              <div className="relative">
+                {/* Slider Track - Three distinct segments */}
+                <div
+                  ref={sliderTrackRef}
+                  className="relative h-14 rounded-full cursor-pointer border border-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm shadow-inner overflow-hidden flex"
+                >
+                  {/* Individual Segment Buttons - Each with own background */}
+                  {categories.map((category, index) => {
+                    const isActive = activeCategory === category;
+                    const segmentWidth = 100 / categories.length;
+                    
+                    return (
+                      <button
+                        key={category}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActiveCategory(category);
+                        }}
+                        className={`h-full flex items-center justify-center text-sm md:text-base font-semibold font-sans transition-all duration-300 whitespace-nowrap ${
+                          index === 0 ? "rounded-l-full" : ""
+                        } ${
+                          index === categories.length - 1 ? "rounded-r-full" : ""
+                        } ${
+                          isActive
+                            ? "bg-gradient-to-r from-[#ff6b35] via-[#ff7a4a] to-[#ff6b35] text-white shadow-lg shadow-orange-500/30"
+                            : "bg-[#2d1b4e]/60 text-gray-300 hover:text-white hover:bg-[#2d1b4e]/80"
+                        }`}
+                        style={{
+                          width: `${segmentWidth}%`,
+                        }}
+                      >
+                        {category}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
