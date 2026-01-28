@@ -4,14 +4,18 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import SolutionsSection from "./components/SolutionsSection";
 import SkillsSection from "./components/SkillsSection";
+import GradientBackground from "./components/GradientBackground";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#1a0d2e] text-white">
-      <Header />
-      <HeroSection />
-      <SolutionsSection />
-      <SkillsSection />
+    <div className="min-h-screen text-white relative overflow-x-hidden">
+      <GradientBackground />
+      <div className="relative z-10">
+        <Header />
+        <HeroSection />
+        <SolutionsSection />
+        <SkillsSection />
+      </div>
     </div>
   );
 }

@@ -120,20 +120,20 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative h-screen flex flex-col overflow-hidden bg-[#1a0d2e]"
+      className="relative h-screen flex flex-col overflow-hidden"
     >
       <div className="relative flex-1 flex items-center px-6 md:px-12 lg:px-16 pt-20">
         {/* Left Content */}
-        <div className="flex-1 max-w-2xl z-20 flex flex-col justify-center py-8 relative">
+        <div className="flex-1 max-w-3xl z-20 flex flex-col justify-center py-8 relative">
           {/* Tagline */}
           <h1
             ref={heroTitleRef}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-mono font-bold leading-[1.1] mb-6 italic tracking-[-0.02em] text-white"
+            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-mono font-extrabold leading-tight mb-6 italic tracking-[-0.02em] text-white"
+            style={{ textWrap: 'balance', lineHeight: '1.05' }}
           >
             <span className="block">I Build Scalable Systems,</span>
-            <span className="block">Automate Workflows and</span>
-            <span className="block">Deliver Seamless</span>
-            <span className="block">User Experiences.</span>
+            <span className="block">Automate Workflows</span>
+            <span className="block">and Deliver Seamless User Experiences.</span>
           </h1>
 
           {/* Description */}

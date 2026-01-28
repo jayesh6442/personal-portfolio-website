@@ -139,7 +139,7 @@ export default function SkillsSection() {
     <section
       ref={skillsSectionRef}
       id="technology"
-      className="min-h-screen bg-[#1a0d2e] flex items-center justify-center px-6 md:px-12 lg:px-16 py-16"
+      className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-16 py-16 relative"
     >
       <div className="max-w-6xl mx-auto w-full">
         {/* Section Header */}
@@ -162,17 +162,17 @@ export default function SkillsSection() {
         {/* Skills Categories */}
         <div ref={skillCategoriesRef} className="space-y-8">
           {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="space-y-4">
-              <h3 className="text-white text-lg md:text-xl font-semibold font-sans">
+            <div key={categoryIndex} className="space-y-4 ">
+              <h3 className="text-white text-lg md:text-xl  font-semibold font-sans">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 ">
                 {category.skills.map((skill, skillIndex) => {
                   const logoUrl = skillLogos[skill];
                   return (
                     <button
                       key={skillIndex}
-                      className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-200 flex items-center gap-2 font-sans text-sm md:text-base hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
+                      className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-6 py-3 rounded-lg font-bold transition-all duration-200 flex items-center gap-2 font-sans text-lg md:text-base hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
                     >
                       {logoUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
@@ -199,7 +199,7 @@ export default function SkillsSection() {
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                       )}
-                      {skill}
+                      {skill  }
                     </button>
                   );
                 })}

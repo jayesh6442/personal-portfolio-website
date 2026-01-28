@@ -132,7 +132,7 @@ export default function SolutionsSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="min-h-screen bg-gradient-to-b from-[#1a0d2e] via-[#1a0d2e] to-[#0f0519] flex items-center justify-center py-16 md:py-24 px-6 md:px-12 lg:px-16 relative"
+      className="min-h-screen flex items-center justify-center py-16 md:py-24 px-6 md:px-12 lg:px-16 relative"
       style={{ scrollMarginTop: '80px' }}
     >
       {/* Subtle top border for visual separation */}
