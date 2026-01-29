@@ -35,6 +35,7 @@ body {
 
 html {
   background: #1a0d2e;
+  scroll-behavior: smooth;
 }
 
 /* Typography Hierarchy */

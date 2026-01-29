@@ -1,9 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dev Jayesh - Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website showcasing my work as a Full Stack Developer. Built with Next.js, featuring smooth animations, gradient backgrounds, and a clean, professional design.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern UI/UX**: Beautiful gradient backgrounds and smooth animations powered by GSAP
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Performance Optimized**: Built with Next.js for optimal performance and SEO
+- **Sections Included**:
+  - Hero Section with introduction
+  - Skills showcase
+  - Solutions & Services
+  - Projects portfolio
+  - Quality services highlights
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org) 16.1.5
+- **React**: 19.2.3
+- **Styling**: Tailwind CSS 4
+- **Animations**: GSAP (GreenSock Animation Platform)
+- **Fonts**: Geist Sans & Geist Mono (optimized with `next/font`)
+- **Language**: TypeScript
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ (or Bun)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd p3
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +60,21 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Customization
 
-## Learn More
+- Edit `app/page.tsx` to modify the page structure
+- Update `app/layout.tsx` to change metadata and site information
+- Modify components in `app/components/` to customize sections
+- Update `app/globals.css` for global styling changes
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ by Dev Jayesh

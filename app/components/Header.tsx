@@ -50,7 +50,7 @@ export default function Header() {
       <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-16">
         <div
           ref={logoRef}
-          className="text-xl font-bold tracking-wide font-mono text-white"
+          className="text-xl font-bold tracking-wide font-sans text-white"
         >
           Dev jayesh
         </div>
@@ -60,25 +60,25 @@ export default function Header() {
         >
           <Link
             href="#home"
-            className="text-white/80 hover:text-[#ff6b35] transition-colors duration-200"
+            className="text-white hover:text-[#ff6b35] transition-colors duration-200"
           >
             Home
           </Link>
           <Link
             href="#about"
-            className="text-white/80 hover:text-[#ff6b35] transition-colors duration-200"
+            className="text-white hover:text-[#ff6b35] transition-colors duration-200"
           >
             About
           </Link>
           <Link
             href="#projects"
-            className="text-white/80 hover:text-[#ff6b35] transition-colors duration-200"
+            className="text-white hover:text-[#ff6b35] transition-colors duration-200"
           >
             Projects
           </Link>
           <Link
             href="#technology"
-            className="text-white/80 hover:text-[#ff6b35] transition-colors duration-200"
+            className="text-white hover:text-[#ff6b35] transition-colors duration-200"
           >
             Technology
           </Link>

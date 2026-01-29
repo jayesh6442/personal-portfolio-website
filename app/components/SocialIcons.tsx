@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-
 export default function SocialIcons() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -96,7 +95,7 @@ export default function SocialIcons() {
   return (
     <div
       ref={containerRef}
-      className="absolute top-16 right-0 flex flex-col gap-4 z-40"
+      className="absolute top-30 right-8 flex flex-row gap-4 z-40"
       style={{ visibility: "visible" }}
     >
       {socialLinks.map((link, index) => (

@@ -139,7 +139,7 @@ export default function HeroSection() {
           {/* Description */}
           <p
             ref={heroDescriptionRef}
-            className="text-sm md:text-base lg:text-lg text-gray-300 mb-8 leading-[1.6] max-w-xl font-sans tracking-normal"
+            className="text-sm md:text-base lg:text-lg text-white italic mb-8 leading-[1.6] max-w-xl font-sans tracking-normal"
           >
             Leveraging full-stack expertise to deliver fast, reliable, and
             scalable solutions.
@@ -175,7 +175,11 @@ export default function HeroSection() {
           <div className="absolute bottom-4 right-0 text-right max-h-[60vh] overflow-hidden">
             <div
               ref={largeTextRef}
-              className="text-5xl xl:text-6xl 2xl:text-7xl font-mono font-bold leading-[0.9] text-white/10 select-none pointer-events-none tracking-[-0.03em]"
+              className="text-5xl xl:text-6xl 2xl:text-7xl font-sans font-bold leading-[0.9] text-white select-none pointer-events-none tracking-[-0.03em]"
+              style={{ 
+                opacity: 0.1,
+                fontFeatureSettings: '"liga" 1, "kern" 1'
+              }}
             >
               Full
               <br />

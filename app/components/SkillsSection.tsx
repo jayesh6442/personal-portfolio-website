@@ -17,7 +17,6 @@ const skillLogos: Record<string, string> = {
   Django: "https://cdn.simpleicons.org/django",
   Spring: "https://cdn.simpleicons.org/spring",
   React: "https://cdn.simpleicons.org/react",
-  Vue: "https://cdn.simpleicons.org/vuedotjs",
   // Databases
   PostgreSQL: "https://cdn.simpleicons.org/postgresql",
   MongoDB: "https://cdn.simpleicons.org/mongodb",
@@ -116,7 +115,7 @@ export default function SkillsSection() {
     },
     {
       title: "Frameworks",
-      skills: ["Express", "Next.js", "Django", "Spring", "React", "Vue"],
+      skills: ["Express", "Next.js", "Django", "Spring", "React"],
     },
     {
       title: "Databases",
