@@ -10,6 +10,7 @@ import QualityServicesSection from "./components/QualityServicesSection";
 import GradientBackground from "./components/GradientBackground";
 
 export default function Home() {
+  
   return (
     <div className="min-h-screen text-white relative overflow-x-hidden">
       <GradientBackground />
