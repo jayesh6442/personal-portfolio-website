@@ -8,6 +8,8 @@ import ProjectsSection from "./components/ProjectsSection";
 import ServicesSection from "./components/ServicesSection";
 import QualityServicesSection from "./components/QualityServicesSection";
 import GradientBackground from "./components/GradientBackground";
+import Footer from "./components/Footer";
+import ContactSection from "./components/ContactSection";
 
 export default function Home() {
   
@@ -21,7 +23,10 @@ export default function Home() {
         <SolutionsSection />
         <ProjectsSection />
         <ServicesSection />
+        
         <QualityServicesSection />
+        <ContactSection/>
+        <Footer/>
       </div>
     </div>
   );

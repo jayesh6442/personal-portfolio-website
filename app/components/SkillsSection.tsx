@@ -138,7 +138,7 @@ export default function SkillsSection() {
     <section
       ref={skillsSectionRef}
       id="technology"
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-16 py-16 relative"
+      className="min-h-screen  flex items-center justify-center px-6 md:px-12 lg:px-16 py-16 relative"
     >
       <div className="max-w-6xl mx-auto w-full">
         {/* Section Header */}
