@@ -163,7 +163,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className=" font-semibold mb-1 font-sans">Phone</h4>
-                  <p className=" font-sans">+1 (555) 123-4567</p>
+                  <p className=" font-sans">+91 9724268523 </p>
                 </div>
               </div>
 
@@ -209,7 +209,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1 font-sans">Location</h4>
-                  <p className="font-sans">Your City, Your Country</p>
+                  <p className="font-sans">Ahmedabad, india</p>
                 </div>
               </div>
             </div>
@@ -218,7 +218,7 @@ export default function ContactSection() {
               <h4 className="font-semibold mb-4 font-sans">Connect With Me</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/devjayesh/"
                   className="w-12 h-12 rounded-lg  bg-[#ff6b35] hover:bg-gray-200 border border-gray-200 flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="LinkedIn"
                 >
@@ -233,7 +233,7 @@ export default function ContactSection() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/jayesh6442"
                   className="w-12 h-12 rounded-lg bg-[#ff6b35] hover:bg-gray-200 border border-gray-200 flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="GitHub"
                 >
@@ -248,7 +248,7 @@ export default function ContactSection() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/Devjayeshh"
                   className="w-12 h-12 rounded-lg bg-[#ff6b35] hover:bg-gray-200 border border-gray-200 flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label="Twitter"
                 >

@@ -24,7 +24,7 @@ export default function Contact() {
                                 <div>
                                     <h4 className="font-semibold text-white mb-1">Phone</h4>
                                     <a
-                                        href="tel:+917802927428"
+                                        href="tel:+919724268523"
                                         className="text-gray-400 hover:text-accent transition-colors"
                                     >
                                         +91 78029 27428
@@ -55,7 +55,7 @@ export default function Contact() {
                                 <div>
                                     <h4 className="font-semibold text-white mb-1">LinkedIn</h4>
                                     <a
-                                        href="https://linkedin.com"
+                                        href="https://linkedin.com/in/devjayesh"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-gray-400 hover:text-accent transition-colors"

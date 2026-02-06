@@ -152,13 +152,13 @@ export default function HeroSection() {
             style={{ visibility: "visible" }}
           >
             <button 
-              className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-8 py-3.5 rounded-lg font-medium transition-all duration-200 shadow-lg shadow-orange-500/20 font-sans text-base leading-normal tracking-normal hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-lg font-medium transition-all duration-200 shadow-lg shadow-orange-500/20 font-sans text-sm sm:text-base leading-normal tracking-normal sm:hover:scale-105 active:scale-95"
               style={{ opacity: 1, visibility: "visible" }}
             >
               Get in Touch
             </button>
             <button 
-              className="border-2 border-[#ff6b35] text-white hover:bg-[#ff6b35]/10 px-8 py-3.5 rounded-lg font-medium transition-all duration-200 font-sans text-base leading-normal tracking-normal hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto border-2 border-[#ff6b35] text-white hover:bg-[#ff6b35]/10 px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-lg font-medium transition-all duration-200 font-sans text-sm sm:text-base leading-normal tracking-normal sm:hover:scale-105 active:scale-95"
               style={{ opacity: 1, visibility: "visible" }}
             >
               View Portfolio

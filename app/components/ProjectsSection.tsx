@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 
 export default function ProjectsSection() {
@@ -93,6 +94,8 @@ export default function ProjectsSection() {
     description: string;
     technologies: string[];
     icon: React.ReactElement;
+    imageSrc?: string;
+    imageAlt?: string;
     githubLink?: string;
     liveLink?: string;
   }>> = {
@@ -102,6 +105,8 @@ export default function ProjectsSection() {
         title: "Fastify E-Commerce Platform",
         description: "Modern e-commerce solution built with React and Next.js, featuring real-time inventory management, secure payment integration, and responsive design",
         technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+        imageSrc: "/projects/ecommerce-platform.svg",
+        imageAlt: "E-commerce platform dashboard preview",
         githubLink: "https://github.com/jayesh6442/ecommerce-platform",
         liveLink: "https://ecommerce-demo.vercel.app",
         icon: (
@@ -117,6 +122,8 @@ export default function ProjectsSection() {
         title: "Task Management App",
         description: "Collaborative project management tool with drag-and-drop interface, real-time updates, and intuitive user experience",
         technologies: ["React", "Redux", "Material-UI", "WebSocket"],
+        imageSrc: "/projects/task-management.svg",
+        imageAlt: "Task management board preview",
         githubLink: "https://github.com/jayesh6442/fastify-ecom",
         liveLink: "https://task-management-demo.vercel.app",
         icon: (
@@ -131,6 +138,8 @@ export default function ProjectsSection() {
         title: "Analytics Dashboard",
         description: "Data visualization platform with interactive charts, real-time metrics, and comprehensive reporting capabilities",
         technologies: ["Vue.js", "D3.js", "Chart.js", "Webpack"],
+        imageSrc: "/projects/analytics-dashboard.svg",
+        imageAlt: "Analytics dashboard chart preview",
         githubLink: "https://github.com/username/analytics-dashboard",
         liveLink: "https://analytics-demo.vercel.app",
         icon: (
@@ -146,6 +155,8 @@ export default function ProjectsSection() {
         title: "Social Media Platform",
         description: "Feature-rich social networking application with real-time messaging, content sharing, and user engagement features",
         technologies: ["React", "GraphQL", "Apollo", "Styled Components"],
+        imageSrc: "/projects/social-platform.svg",
+        imageAlt: "Social platform feed preview",
         githubLink: "https://github.com/username/social-media",
         liveLink: "https://social-media-demo.vercel.app",
         icon: (
@@ -161,6 +172,8 @@ export default function ProjectsSection() {
         title: "API Gateway Service",
         description: "Microservices architecture with API gateway, authentication, rate limiting, and comprehensive monitoring",
         technologies: ["Go", "Express", "Docker", "Kubernetes"],
+        imageSrc: "/projects/api-gateway.svg",
+        imageAlt: "API gateway service architecture preview",
         githubLink: "https://github.com/username/api-gateway",
         liveLink: "https://api-gateway-demo.vercel.app",
         icon: (
@@ -176,6 +189,8 @@ export default function ProjectsSection() {
         title: "Payment Processing System",
         description: "Secure payment gateway with multi-currency support, fraud detection, and transaction management",
         technologies: ["Node.js", "PostgreSQL", "Redis", "Stripe API"],
+        imageSrc: "/projects/payment-system.svg",
+        imageAlt: "Payment processing analytics preview",
         githubLink: "https://github.com/username/payment-system",
         liveLink: "https://payment-processing-demo.vercel.app",
         icon: (
@@ -190,6 +205,8 @@ export default function ProjectsSection() {
         title: "Real-time Chat Service",
         description: "Scalable messaging platform with WebSocket support, message queuing, and presence indicators",
         technologies: ["Python", "Django", "WebSocket", "RabbitMQ"],
+        imageSrc: "/projects/realtime-chat.svg",
+        imageAlt: "Real-time chat interface preview",
         githubLink: "https://github.com/username/chat-service",
         liveLink: "https://chat-service-demo.vercel.app",
         icon: (
@@ -203,6 +220,8 @@ export default function ProjectsSection() {
         title: "Database Management System",
         description: "High-performance database solution with replication, sharding, and automated backup capabilities",
         technologies: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+        imageSrc: "/projects/database-system.svg",
+        imageAlt: "Database cluster management preview",
         githubLink: "https://github.com/username/database-system",
         liveLink: "https://database-system-demo.vercel.app",
         icon: (
@@ -352,11 +371,22 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className={`${project.bgColor} rounded-xl p-6 md:p-8 text-white border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col overflow-hidden min-h-[300px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px]`}
+              className={`${project.bgColor} group rounded-xl p-6 md:p-8 text-white border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col overflow-hidden min-h-[300px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px]`}
             >
-              {/* Project Icon */}
-              <div className="mb-4 flex-shrink-0">
-                {project.icon}
+              {/* Project Preview */}
+              <div className="relative mb-4 overflow-hidden rounded-xl border border-white/15">
+                <Image
+                  src={project.imageSrc || "/projects/ecommerce-platform.svg"}
+                  alt={project.imageAlt || `${project.title} preview`}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent"></div>
+                <div className="absolute bottom-2 left-2 flex-shrink-0 text-white scale-75 origin-bottom-left">
+                  {project.icon}
+                </div>
               </div>
 
               {/* Project Title */}

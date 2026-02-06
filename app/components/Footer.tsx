@@ -3,7 +3,7 @@ export default function Footer() {
         <footer className="bg-dark border-t border-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-lg font-bold">Jayesh S.</div>
+                    <div className="text-lg font-bold">Jayesh Sarvaiya.</div>
                     <nav className="flex flex-wrap justify-center gap-6 text-sm">
                         <a href="#home" className="text-gray-400 hover:text-accent transition-colors uppercase">
                             Home
@@ -29,7 +29,7 @@ export default function Footer() {
                     </nav>
                     <div className="flex gap-4">
                         <a
-                            href="https://linkedin.com"
+                            href="https://linkedin.com/in/devjayesh"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-accent transition-colors"
@@ -40,7 +40,7 @@ export default function Footer() {
                             </svg>
                         </a>
                         <a
-                            href="https://twitter.com"
+                            href="https://x.com/Devjayeshh"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-accent transition-colors"
@@ -51,7 +51,7 @@ export default function Footer() {
                             </svg>
                         </a>
                         <a
-                            href="https://github.com"
+                            href="https://github.com/jayesh6442"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-accent transition-colors"

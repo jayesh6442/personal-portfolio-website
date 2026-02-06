@@ -138,7 +138,7 @@ export default function SkillsSection() {
     <section
       ref={skillsSectionRef}
       id="technology"
-      className="min-h-screen  flex items-center justify-center px-6 md:px-12 lg:px-16 py-16 relative"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-16 py-16 relative"
     >
       <div className="max-w-6xl mx-auto w-full">
         {/* Section Header */}
@@ -159,28 +159,28 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Categories */}
-        <div ref={skillCategoriesRef} className="space-y-8">
+        <div ref={skillCategoriesRef} className="space-y-6 md:space-y-8">
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-4 ">
-              <h3 className="text-white text-lg md:text-xl  font-semibold font-sans">
+              <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold font-sans">
                 {category.title}
               </h3>
-              <div className="flex flex-wrap gap-3 ">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {category.skills.map((skill, skillIndex) => {
                   const logoUrl = skillLogos[skill];
                   return (
                     <button
                       key={skillIndex}
-                      className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-6 py-3 rounded-lg font-bold transition-all duration-200 flex items-center gap-2 font-sans text-lg md:text-base hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
+                      className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-3.5 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-md sm:rounded-lg font-semibold transition-all duration-200 flex items-center gap-1.5 sm:gap-2 font-sans text-sm sm:text-base md:text-base sm:hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
                     >
                       {logoUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
                           src={logoUrl}
                           alt={`${skill} logo`}
-                          width={20}
-                          height={20}
-                          className="w-5 h-5 object-contain"
+                          width={16}
+                          height={16}
+                          className="w-4 h-4 sm:w-5 sm:h-5 object-contain"
                           // style={{ filter: "brightness(0) invert(1)" }}
                           loading="lazy"
                         />
