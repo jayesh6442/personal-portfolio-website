@@ -9,7 +9,7 @@ export default function ContactSection() {
   const contactSectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -269,10 +269,10 @@ export default function ContactSection() {
           {/* Right Side - Contact Form */}
           <div ref={formRef} className="bg-white rounded-xl p-8 md:p-12 border border-gray-200">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 font-sans">
-              Let's Work Together
+              Let&apos;s Work Together
             </h3>
             <p className="text-gray-600 mb-8 font-sans">
-              I'm currently available for freelance work. If you have a project that needs expertise in full-stack development, don't hesitate to reach out.
+              I&apos;m currently available for freelance work. If you have a project that needs expertise in full-stack development, don&lsquo;t hesitate to reach out.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">

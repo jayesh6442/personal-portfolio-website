@@ -68,7 +68,7 @@ export default function Contact() {
 
                         {/* Map Placeholder */}
                         <div className="w-full h-64 bg-dark rounded-lg border border-gray-800 overflow-hidden">
-                            <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                            <div className="w-full h-full bg-linear-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                                 <span className="text-gray-600 text-sm">Map View</span>
                             </div>
                         </div>
@@ -77,10 +77,10 @@ export default function Contact() {
                     {/* Right Column - Contact Form */}
                     <div>
                         <h3 className="text-2xl font-bold text-white mb-6">
-                            Let's Work Together
+                            Let&apos;s Work Together
                         </h3>
                         <p className="text-gray-400 mb-8">
-                            I'm always open to new collaborations and exciting projects. Let's discuss how we can work together to bring your ideas to life.
+                            I&lsquo;m always open to new collaborations and exciting projects. Let&lsquo;s discuss how we can work together to bring your ideas to life.
                         </p>
 
                         <form className="space-y-6">
