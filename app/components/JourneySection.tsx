@@ -155,7 +155,7 @@ export default function JourneySection() {
                 onClick={() => setActivePeriod(period.year)}
                 className={`px-6 py-3 rounded-lg font-semibold font-sans transition-all duration-300 ${
                   isActive
-                    ? "bg-gradient-to-r from-[#ff6b35] via-[#ff7a4a] to-[#ff6b35] text-white shadow-lg shadow-orange-500/30"
+                    ? "bg-linear-to-r from-[#ff6b35] via-[#ff7a4a] to-[#ff6b35] text-white shadow-lg shadow-orange-500/30"
                     : "bg-gray-100 text-gray-700 hover:text-gray-900 hover:bg-gray-200"
                 }`}
               >

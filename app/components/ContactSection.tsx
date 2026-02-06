@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { GitHubCalendar } from "react-github-calendar";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -122,7 +121,7 @@ export default function ContactSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2
             ref={titleRef}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 font-sans"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white font-sans"
           >
             Get in Touch
           </h2>
@@ -139,14 +138,14 @@ export default function ContactSection() {
           {/* Left Side - Contact Information */}
           <div ref={infoRef} className="space-y-8">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900 font-sans">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-white font-sans">
                 Contact Information
               </h3>
             </div>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center shrink-0">
                   <svg
                     width="24"
                     height="24"
@@ -168,7 +167,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center shrink-0">
                   <svg
                     width="24"
                     height="24"
@@ -191,7 +190,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center shrink-0">
                   <svg
                     width="24"
                     height="24"

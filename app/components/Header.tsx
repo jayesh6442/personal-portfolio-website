@@ -11,9 +11,10 @@ export default function Header() {
   const navRef = useRef<HTMLElement>(null);
   const navItems = [
     { href: "#home", label: "Home" },
+    { href: "#technology", label: "Technology" },
     { href: "#about", label: "About" },
     { href: "#projects", label: "Projects" },
-    { href: "#technology", label: "Technology" },
+    { href: "#contact", label: "Contact" },
   ];
 
   useEffect(() => {

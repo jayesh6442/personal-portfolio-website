@@ -136,13 +136,13 @@ export default function SolutionsSection() {
       style={{ scrollMarginTop: '80px' }}
     >
       {/* Subtle top border for visual separation */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section Header */}
         <div className="mb-12 md:mb-16">
           <h2
             ref={titleRef}
-            className="text-4xl md:text-5xl lg:text-6xl font-mono font-medium italic mb-6 tracking-tight text-white leading-[1.1]"
+            className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium italic mb-6 tracking-tight text-white leading-[1.1]"
           >
             All Kind Of Coding Solution
           </h2>
@@ -204,7 +204,7 @@ export default function SolutionsSection() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="text-[#ff6b35] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform"
+                      className="text-[#ff6b35] shrink-0 mt-0.5 group-hover:scale-110 transition-transform"
                     >
                       <polyline points="20 6 9 17 4 12" />
                     </svg>

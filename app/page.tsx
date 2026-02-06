@@ -10,6 +10,7 @@ import QualityServicesSection from "./components/QualityServicesSection";
 import GradientBackground from "./components/GradientBackground";
 import Footer from "./components/Footer";
 import ContactSection from "./components/ContactSection";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <ProjectsSection />
         <ServicesSection />
         <QualityServicesSection />
+        <TestimonialsSection/>
         <ContactSection/>
         <Footer/>
       </div>

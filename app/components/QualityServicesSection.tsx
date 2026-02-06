@@ -166,7 +166,7 @@ export default function QualityServicesSection() {
               </h3>
 
               {/* Service Description */}
-              <p className="text-gray-300 mb-6 font-sans text-sm md:text-base leading-relaxed flex-grow">
+              <p className="text-gray-300 mb-6 font-sans text-sm md:text-base leading-relaxed grow">
                 {service.description}
               </p>
 

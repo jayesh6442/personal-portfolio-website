@@ -299,7 +299,7 @@ export default function ProjectsSection() {
       style={{ scrollMarginTop: '80px' }}
     >
       {/* Subtle top border for visual separation */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
@@ -342,7 +342,7 @@ export default function ProjectsSection() {
                           index === categories.length - 1 ? "rounded-r-full" : ""
                         } ${
                           isActive
-                            ? "bg-gradient-to-r from-[#ff6b35] via-[#ff7a4a] to-[#ff6b35] text-white shadow-lg shadow-orange-500/30"
+                            ? "bg-linear-to-r from-[#ff6b35] via-[#ff7a4a] to-[#ff6b35] text-white shadow-lg shadow-orange-500/30"
                             : "bg-[#2d1b4e]/60 text-gray-300 hover:text-white hover:bg-[#2d1b4e]/80"
                         }`}
                         style={{
@@ -371,7 +371,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className={`${project.bgColor} group rounded-xl p-6 md:p-8 text-white border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col overflow-hidden min-h-[300px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px]`}
+              className={`${project.bgColor} group rounded-xl p-6 md:p-8 text-white border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col overflow-hidden min-h-75 sm:min-h-80 md:min-h-90 lg:min-h-100`}
             >
               {/* Project Preview */}
               <div className="relative mb-4 overflow-hidden rounded-xl border border-white/15">
@@ -383,25 +383,25 @@ export default function ProjectsSection() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent"></div>
-                <div className="absolute bottom-2 left-2 flex-shrink-0 text-white scale-75 origin-bottom-left">
+                <div className="absolute inset-0 bg-linear-to-t from-black/45 via-black/10 to-transparent"></div>
+                <div className="absolute bottom-2 left-2 shrink-0 text-white scale-75 origin-bottom-left">
                   {project.icon}
                 </div>
               </div>
 
               {/* Project Title */}
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-white font-sans flex-shrink-0">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 text-white font-sans shrink-0">
                 {project.title}
               </h3>
 
               {/* Project Description */}
-              <p className="text-gray-300 mb-4 font-sans text-sm md:text-base leading-relaxed flex-grow min-h-0">
+              <p className="text-gray-300 mb-4 font-sans text-sm md:text-base leading-relaxed grow min-h-0">
                 {project.description}
               </p>
 
               {/* GitHub and Live Links */}
               {(project.githubLink || project.liveLink) && (
-                <div className="flex flex-wrap gap-3 mb-4 flex-shrink-0">
+                <div className="flex flex-wrap gap-3 mb-4 shrink-0">
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
@@ -429,7 +429,7 @@ export default function ProjectsSection() {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-gradient-to-r from-[#ff6b35] to-[#ff7a4a] hover:from-[#ff7a4a] hover:to-[#ff6b35] text-white px-4 py-2 rounded-lg text-sm font-medium font-sans border border-[#ff6b35]/50 hover:border-[#ff6b35] transition-all duration-300 hover:scale-105 shadow-lg shadow-orange-500/20"
+                      className="flex items-center gap-2 bg-linear-to-r from-[#ff6b35] to-[#ff7a4a] hover:from-[#ff7a4a] hover:to-[#ff6b35] text-white px-4 py-2 rounded-lg text-sm font-medium font-sans border border-[#ff6b35]/50 hover:border-[#ff6b35] transition-all duration-300 hover:scale-105 shadow-lg shadow-orange-500/20"
                     >
                       <svg
                         width="16"
@@ -452,7 +452,7 @@ export default function ProjectsSection() {
               )}
 
               {/* Technologies */}
-              <div className="flex flex-wrap gap-2 flex-shrink-0">
+              <div className="flex flex-wrap gap-2 shrink-0">
                 {project.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
