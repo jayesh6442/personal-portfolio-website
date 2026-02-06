@@ -191,7 +191,7 @@ export default function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg  flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-[#ff6b35]/10 flex items-center justify-center flex-shrink-0">
                   <svg
                     width="24"
                     height="24"

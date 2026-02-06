@@ -352,8 +352,7 @@ export default function ProjectsSection() {
           {projects.map((project, index) => (
             <article
               key={index}
-              className={`${project.bgColor} rounded-xl p-6 md:p-8 text-white border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col overflow-hidden`}
-              style={{ height: "60vh", minHeight: "400px" }}
+              className={`${project.bgColor} rounded-xl p-6 md:p-8 text-white border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 flex flex-col overflow-hidden min-h-[300px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px]`}
             >
               {/* Project Icon */}
               <div className="mb-4 flex-shrink-0">
@@ -366,7 +365,7 @@ export default function ProjectsSection() {
               </h3>
 
               {/* Project Description */}
-              <p className="text-gray-300 mb-4 font-sans text-sm md:text-base leading-relaxed overflow-y-auto flex-grow min-h-0">
+              <p className="text-gray-300 mb-4 font-sans text-sm md:text-base leading-relaxed flex-grow min-h-0">
                 {project.description}
               </p>
 

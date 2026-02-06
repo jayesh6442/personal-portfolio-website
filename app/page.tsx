@@ -12,7 +12,6 @@ import Footer from "./components/Footer";
 import ContactSection from "./components/ContactSection";
 
 export default function Home() {
-  
   return (
     <div className="min-h-screen text-white relative overflow-x-hidden">
       <GradientBackground />
@@ -23,7 +22,6 @@ export default function Home() {
         <SolutionsSection />
         <ProjectsSection />
         <ServicesSection />
-        
         <QualityServicesSection />
         <ContactSection/>
         <Footer/>
