@@ -1,56 +1,46 @@
-# Stage 1: Dependencies
-FROM node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat
+# -----------------------------
+# Base
+# -----------------------------
+FROM node:20-bookworm AS base
 WORKDIR /app
+ENV NODE_ENV=production
 
-# Copy package files
+# -----------------------------
+# Dependencies
+# -----------------------------
+FROM base AS deps
+COPY package.json package-lock.json* ./
+RUN npm ci --omit=dev
+
+# -----------------------------
+# Builder
+# -----------------------------
+FROM base AS builder
 COPY package.json package-lock.json* ./
 RUN npm ci
-
-# Stage 2: Builder
-FROM node:20-alpine AS builder
-WORKDIR /app
-
-# Copy dependencies from deps stage
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Set environment variables
-ENV NEXT_TELEMETRY_DISABLED 1
-
-# Build the application
-# Note: This requires network access for Google Fonts
 RUN npm run build
 
-# Stage 3: Runner (Production)
+# -----------------------------
+# Runtime (Small + Secure)
+# -----------------------------
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV PORT=3000
 
-# Create a non-root user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Non-root user (security)
+RUN addgroup -g 1001 -S nodejs \
+ && adduser -S nextjs -u 1001
 
-# Copy necessary files from builder
-COPY --from=builder /app/next.config.* ./
+# Copy only what runtime needs
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
-# Set correct permissions
-RUN chown -R nextjs:nodejs /app
-
-# Switch to non-root user
 USER nextjs
 
-# Expose the port
 EXPOSE 3000
 
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
-
-# Start the application
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
