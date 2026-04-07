@@ -162,16 +162,16 @@ export default function SkillsSection() {
         <div ref={skillCategoriesRef} className="space-y-6 md:space-y-8">
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-4 ">
-              <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold font-sans">
-                {category.title}
-              </h3>
+              <h4 className="text-white text-base  sm:text-lg md:text-xl mb-1 font-sans">
+                {category.title } 
+              </h4>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {category.skills.map((skill, skillIndex) => {
                   const logoUrl = skillLogos[skill];
                   return (
                     <button
                       key={skillIndex}
-                      className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-3.5 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-md sm:rounded-lg font-semibold transition-all duration-200 flex items-center gap-1.5 sm:gap-2 font-sans text-sm sm:text-base md:text-base sm:hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
+                      className="bg-[#ff6b35] hover:bg-[#ff7a4a] mt-2 text-white px-3.5 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-md sm:rounded-lg font-semibold transition-all duration-200 flex items-center gap-1.5 sm:gap-2 font-sans text-sm sm:text-base md:text-base sm:hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20"
                     >
                       {logoUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element

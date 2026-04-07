@@ -128,7 +128,7 @@ export default function HeroSection() {
           {/* Tagline */}
           <h1
             ref={heroTitleRef}
-            className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-sans font-extrabold leading-tight mb-6 italic tracking-[-0.02em] text-white"
+            className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-sans font-semibold leading-tight mb-6 italic tracking-[-0.02em] text-white"
             style={{ textWrap: 'balance', lineHeight: '1.05' }}
           >
             <span className="block">I Build Scalable Systems,</span>

@@ -303,17 +303,17 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
-          <h2
+          <h3
             ref={projectsTitleRef}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white font-sans"
+            className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 text-white font-sans"
           >
             Some Of Projects
-          </h2>
+          </h3>
           
           {/* Category Slider - Window/Slider Bar */}
           <div
             ref={projectsBarRef}
-            className="mb-12 md:mb-16 flex justify-center"
+            className="mb-12 md:mb-16 mt-4 md:mt-2 flex justify-center"
             style={{ transformOrigin: "center" }}
           >
             <div className="w-full max-w-2xl px-4">
