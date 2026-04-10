@@ -60,7 +60,8 @@ export default function Header() {
           ref={logoRef}
           className="text-lg sm:text-xl font-bold tracking-wide font-sans text-white"
         >
-          Dev jayesh
+          Devjayesh
+
         </div>
         <nav
           ref={navRef}
@@ -111,9 +112,8 @@ export default function Header() {
       </div>
       <nav
         id="mobile-nav"
-        className={`md:hidden overflow-hidden border-t border-white/10 bg-[#1a0d2e]/95 transition-all duration-300 ${
-          isMobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden border-t border-white/10 bg-[#1a0d2e]/95 transition-all duration-300 ${isMobileMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="px-4 py-3 sm:px-6 flex flex-col gap-1">
           {navItems.map((item) => (

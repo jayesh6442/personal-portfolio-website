@@ -18,7 +18,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en">
+      <head>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Jayesh Sarvaiya",
+              url: "https://devjayesh.com",
+              sameAs: [
+                "https://github.com/jayesh6442",
+                "https://linkedin.com/in/devjayesh"
+              ],
+              description: "I Build Scalable Systems, Automate Workflows and Deliver Seamless User Experiences.",
+              KnowsAbout: [
+                "Go", "Python", "JavaScript", "TypeScript", "Java", "Docker", "Kubernetes", "AWS", "Github Actions", "Jenkins", "Argo CD"
+              ],
+              jobTitle: "Backend Developer"
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} antialiased`}
       >

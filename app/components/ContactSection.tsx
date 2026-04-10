@@ -4,12 +4,22 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
 export default function ContactSection() {
+  const contactEmail = "notsjayesh@gmail.com";
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{
+    type: "success" | "error";
+    text: string;
+  } | null>(null);
   const contactSectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
+
+  const contactFormEndpoint =
+    process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ||
+    `https://formsubmit.co/ajax/${contactEmail}`;
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -96,13 +106,50 @@ export default function ContactSection() {
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setSubmitMessage(null);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(contactFormEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: "New Portfolio Inquiry",
+          _captcha: "false",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      setSubmitMessage({
+        type: "success",
+        text: "Thanks! Your message has been sent successfully.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch {
+      setSubmitMessage({
+        type: "error",
+        text: "Unable to send your message right now. Please try again in a minute.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (submitMessage) {
+      setSubmitMessage(null);
+    }
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -185,7 +232,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1 font-sans">Email</h4>
-                  <p className="font-sans">contact@devjayesh.work</p>
+                  <p className="font-sans">{contactEmail}</p>
                 </div>
               </div>
 
@@ -214,8 +261,8 @@ export default function ContactSection() {
             </div>
 
             <div className="pt-6">
-              <h4 className="font-semibold mb-4 font-sans">Connect With Me</h4>
-              <div className="flex gap-4">
+              <h4 className="font-semibold mb-6 font-sans">Connect With Me</h4>
+              <div className="flex gap-4 mt-2">
                 <a
                   href="https://www.linkedin.com/in/devjayesh/"
                   className="w-12 h-12 rounded-lg  bg-[#ff6b35] hover:bg-gray-200 border border-gray-200 flex items-center justify-center transition-all duration-300 hover:scale-110"
@@ -325,10 +372,20 @@ export default function ContactSection() {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-8 py-3.5 rounded-lg font-medium transition-all duration-200 shadow-lg shadow-orange-500/20 font-sans hover:scale-105 active:scale-95"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
+              {submitMessage && (
+                <p
+                  className={`text-sm font-sans ${
+                    submitMessage.type === "success" ? "text-green-600" : "text-red-600"
+                  }`}
+                >
+                  {submitMessage.text}
+                </p>
+              )}
             </form>
           </div>
         </div>

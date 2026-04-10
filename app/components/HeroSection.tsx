@@ -5,8 +5,7 @@ import { gsap } from "gsap";
 import SocialIcons from "./SocialIcons";
 
 export default function HeroSection() {
-  const heroTitleRef = useRef<HTMLHeadingElement>(null);
-  const heroDescriptionRef = useRef<HTMLParagraphElement>(null);
+  const heroTitleRef = useRef<HTMLHeadingElement>(null); const heroDescriptionRef = useRef<HTMLParagraphElement>(null);
   const heroButtonsRef = useRef<HTMLDivElement>(null);
   const largeTextRef = useRef<HTMLDivElement>(null);
 
@@ -14,12 +13,12 @@ export default function HeroSection() {
     if (!heroButtonsRef.current) return;
 
     const buttons = Array.from(heroButtonsRef.current.children) as HTMLElement[];
-    
+
     // Store ref values to avoid stale closures
     const titleElement = heroTitleRef.current;
     const descriptionElement = heroDescriptionRef.current;
     const largeTextElement = largeTextRef.current;
-    
+
     // Set initial state to visible for all elements
     if (titleElement) {
       gsap.set(titleElement, { opacity: 1, visibility: "visible" });
@@ -125,11 +124,12 @@ export default function HeroSection() {
       <div className="relative flex-1 flex items-center px-6 md:px-12 lg:px-16 pt-20">
         {/* Left Content */}
         <div className="flex-1 max-w-3xl z-20 flex flex-col justify-center py-8 relative">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-sans mb-7 italic   ">Jayesh Sarvaiya</h1>
           {/* Tagline */}
           <h1
             ref={heroTitleRef}
-            className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-sans font-semibold leading-tight mb-6 italic tracking-[-0.02em] text-white"
-            style={{ textWrap: 'balance', lineHeight: '1.05' }}
+            className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-sans leading-tight mb-6 italic tracking-[-0.02em] text-gray-400 opacity-30"
+            style={{ textWrap: 'balance', lineHeight: '1.10' }}
           >
             <span className="block">I Build Scalable Systems,</span>
             <span className="block">Automate Workflows</span>
@@ -146,24 +146,25 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div
+          {/* <div
             ref={heroButtonsRef}
             className="flex flex-col sm:flex-row gap-4 items-start sm:items-center relative z-20"
             style={{ visibility: "visible" }}
           >
-            <button 
+            <button
               className="w-full sm:w-auto bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-lg font-medium transition-all duration-200 shadow-lg shadow-orange-500/20 font-sans text-sm sm:text-base leading-normal tracking-normal sm:hover:scale-105 active:scale-95"
               style={{ opacity: 1, visibility: "visible" }}
             >
               Get in Touch
             </button>
-            <button 
+            <button
+
               className="w-full sm:w-auto border-2 border-[#ff6b35] text-white hover:bg-[#ff6b35]/10 px-5 sm:px-8 py-2.5 sm:py-3.5 rounded-lg font-medium transition-all duration-200 font-sans text-sm sm:text-base leading-normal tracking-normal sm:hover:scale-105 active:scale-95"
               style={{ opacity: 1, visibility: "visible" }}
             >
               View Portfolio
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Side - Social Icons and Large Text */}
@@ -176,7 +177,7 @@ export default function HeroSection() {
             <div
               ref={largeTextRef}
               className="text-5xl xl:text-6xl 2xl:text-7xl font-sans font-bold leading-[0.9] text-white select-none pointer-events-none tracking-[-0.03em]"
-              style={{ 
+              style={{
                 opacity: 0.1,
                 fontFeatureSettings: '"liga" 1, "kern" 1'
               }}

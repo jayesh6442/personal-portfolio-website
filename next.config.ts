@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   compress: true,
   images: {
-    unoptimized: true,
+    // unoptimized: true,
 
     remotePatterns: [
       {

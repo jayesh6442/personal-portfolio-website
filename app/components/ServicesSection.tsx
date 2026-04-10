@@ -7,7 +7,7 @@ export default function ServicesSection() {
   const servicesSectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef = useRef<HTMLAnchorElement>(null);
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -107,12 +107,13 @@ export default function ServicesSection() {
         </p>
 
         {/* Orange Button */}
-        <button
+        <a
           ref={buttonRef}
+          href="tel:+919724268523"
           className="bg-[#ff6b35] hover:bg-[#ff7a4a] text-white px-8 py-4 rounded-lg font-medium transition-all duration-200 shadow-lg shadow-orange-500/20 font-sans text-base md:text-lg hover:scale-105 active:scale-95"
         >
-          Shedule Call Today
-        </button>
+          Schedule Call Today
+        </a>
       </div>
 
       {/* Thin white horizontal line at the bottom */}

@@ -25,7 +25,8 @@ const skillLogos: Record<string, string> = {
   // Deployments
   Docker: "https://cdn.simpleicons.org/docker",
   Kubernetes: "https://cdn.simpleicons.org/kubernetes",
-  AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  // AWS: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  "AWS": "/aws.svg",
   "Github Actions": "https://cdn.simpleicons.org/githubactions", Jenkins: "https://cdn.simpleicons.org/jenkins",
   "Argo CD": "https://cdn.simpleicons.org/argo/000000",
 };
@@ -163,7 +164,7 @@ export default function SkillsSection() {
           {skillCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="space-y-4 ">
               <h4 className="text-white text-base  sm:text-lg md:text-xl mb-1 font-sans">
-                {category.title } 
+                {category.title}
               </h4>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {category.skills.map((skill, skillIndex) => {
@@ -198,7 +199,7 @@ export default function SkillsSection() {
                           <polyline points="20 6 9 17 4 12" />
                         </svg>
                       )}
-                      {skill  }
+                      {skill}
                     </button>
                   );
                 })}

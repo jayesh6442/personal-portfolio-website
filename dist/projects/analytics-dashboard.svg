@@ -1,0 +1,25 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F2937" />
+      <stop offset="1" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="chart" x1="130" y1="560" x2="1070" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399" />
+      <stop offset="1" stop-color="#60A5FA" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="36" fill="url(#bg)" />
+  <rect x="70" y="70" width="1060" height="660" rx="28" fill="#030712" fill-opacity="0.58" stroke="#E5E7EB" stroke-opacity="0.14" />
+  <rect x="110" y="120" width="340" height="24" rx="12" fill="#E5E7EB" fill-opacity="0.72" />
+  <rect x="110" y="180" width="980" height="240" rx="20" fill="#0B1120" stroke="#34D399" stroke-opacity="0.38" />
+  <rect x="110" y="450" width="300" height="230" rx="18" fill="#0B1120" />
+  <rect x="430" y="450" width="300" height="230" rx="18" fill="#0B1120" />
+  <rect x="750" y="450" width="340" height="230" rx="18" fill="#0B1120" />
+  <polyline points="150,380 330,300 500,340 700,240 880,290 1050,210" stroke="url(#chart)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="700" cy="240" r="12" fill="#60A5FA" />
+  <circle cx="880" cy="290" r="12" fill="#34D399" />
+  <circle cx="1020" cy="132" r="12" fill="#34D399" />
+  <circle cx="1052" cy="132" r="12" fill="#60A5FA" />
+  <circle cx="1084" cy="132" r="12" fill="#E5E7EB" fill-opacity="0.8" />
+</svg>

@@ -11,6 +11,7 @@ export default function TestimonialsSection() {
   const testimonialContentRef = useRef<HTMLDivElement>(null);
   const isSwitchingRef = useRef(false);
   const hasInitializedSliderRef = useRef(false);
+  const sliderDirectionRef = useRef<1 | -1>(1);
 
   useEffect(() => {
     const titleElement = titleRef.current;
@@ -96,12 +97,19 @@ export default function TestimonialsSection() {
       return;
     }
 
+    const totalTestimonials = testimonials.length;
+    const forwardSteps = (nextIndex - currentTestimonial + totalTestimonials) % totalTestimonials;
+    const backwardSteps = (currentTestimonial - nextIndex + totalTestimonials) % totalTestimonials;
+    sliderDirectionRef.current = forwardSteps <= backwardSteps ? 1 : -1;
+
     isSwitchingRef.current = true;
     gsap.to(contentElement, {
-      opacity: 0,
-      y: 12,
-      duration: 0.18,
+      autoAlpha: 0,
+      x: 10 * sliderDirectionRef.current,
+      scale: 0.99,
+      duration: 0.2,
       ease: "power2.inOut",
+      overwrite: "auto",
       onComplete: () => {
         setCurrentTestimonial(nextIndex);
       },
@@ -119,12 +127,15 @@ export default function TestimonialsSection() {
 
     gsap.fromTo(
       contentElement,
-      { opacity: 0, y: -12 },
+      { autoAlpha: 0, x: -10 * sliderDirectionRef.current, scale: 0.99 },
       {
-        opacity: 1,
-        y: 0,
-        duration: 0.34,
+        autoAlpha: 1,
+        x: 0,
+        scale: 1,
+        duration: 0.36,
         ease: "power3.out",
+        overwrite: "auto",
+        clearProps: "x,scale,visibility",
         onComplete: () => {
           isSwitchingRef.current = false;
         },
